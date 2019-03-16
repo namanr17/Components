@@ -1,11 +1,10 @@
 import React from "react";
-import Faker from "faker";
 
 const CommentDetail = function(props) {
   return (
     <div className="comment">
       <a href="/" className="avatar">
-        <img alt="avatar" src={Faker.image.avatar()} />
+        <img alt="avatar" src={props.avatar} />
       </a>
       <div className="content">
         <a href="/" className="author">
@@ -13,10 +12,10 @@ const CommentDetail = function(props) {
         </a>
         <div className="metadata">
           <span className="date" style={{ color: "blue" }}>
-            {props.time} on {props.date}
+            {props.time}
           </span>
         </div>
-        <div className="text">{props.details}</div>
+        <div className="text">{props.content}</div>
       </div>
     </div>
   );
